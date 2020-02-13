@@ -37,7 +37,6 @@ defmodule App.Weather do
     # Se receber :exit ele executa a si mesmo uma última vez para processar o resultado.
     # Ao receber o atom :exit para o processo, ordena o resultado e o mostra na tela.
     # Caso não receba :exit executa a si mesmo de maneira recursiva passando a nova lista e o total.
-
     # O coringa no final executa a si mesmo com os mesmos argumentos em caso de erro.
     receive do
       {:ok, temp} ->
