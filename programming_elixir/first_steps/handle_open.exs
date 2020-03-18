@@ -27,6 +27,18 @@ func.("foo", 0, "bar")
 func.("foo", "bar", "foobar")
 
 # Exercise: Functions-3
-# The operator rem(a, b) returns the remainder after dividing a by b. Write a function that takes a single integer (n) and calls the function in the previous exercise, passing it rem(n,3), rem(n,5), and n. Call it seven times with the arguments 10, 11, 12, and so on. You should get “Buzz, 11, Fizz, 13, 14, FizzBuzz, 16.”
+# The operator rem(a, b) returns the remainder after dividing a by b.
+# Write a function that takes a single integer (n) and calls the function in the previous exercise,
+# passing it rem(n,3), rem(n,5), and n. Call it seven times with the arguments 10, 11, 12, and so on.
+# You should get “Buzz, 11, Fizz, 13, 14, FizzBuzz, 16.”
 
-# (Yes, it’s a FizzBuzz solution with no conditional logic.)
+# (Yes, it’s a FizzBuzz solution with no conditional logic.) -> http://wiki.c2.com/?FizzBuzzTest
+
+func_2 = fn n -> func.(rem(n, 3), rem(n, 5), n) end
+func_2.(10)
+func_2.(11)
+func_2.(12)
+func_2.(13)
+func_2.(14)
+func_2.(15)
+func_2.(16)
