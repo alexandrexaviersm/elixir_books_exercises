@@ -10,20 +10,8 @@ defmodule FizzBuzz do
     Enum.each(1..100, &fizz_buzz(&1))
   end
 
-  def fizz_buzz(n) do
-    cond do
-      number_multiple_3?(n) && number_multiple_5?(n) -> IO.puts("FizzBuzz")
-      number_multiple_3?(n) -> IO.puts("Fizz")
-      number_multiple_5?(n) -> IO.puts("Buzz")
-      true -> IO.puts(n)
-    end
-  end
-
-  defp number_multiple_3?(n) do
-    rem(n, 3) == 0
-  end
-
-  defp number_multiple_5?(n) do
-    rem(n, 5) == 0
-  end
+  def fizz_buzz(n) when rem(n, 15) == 0, do: IO.puts("FizzBuzz")
+  def fizz_buzz(n) when rem(n, 3) == 0, do: IO.puts("Fizz")
+  def fizz_buzz(n) when rem(n, 5) == 0, do: IO.puts("Buzz")
+  def fizz_buzz(n), do: IO.puts(n)
 end
