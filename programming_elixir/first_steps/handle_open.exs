@@ -42,3 +42,23 @@ func_2.(13)
 func_2.(14)
 func_2.(15)
 func_2.(16)
+
+# Exercise: Functions-4
+# Write a function prefix that takes a string. It should return a new
+# function that takes a second string. When that second function is
+# called, it will return a string containing the first string, a space,
+# and the second string.   
+# iex> mrs = prefix.("Mrs")  
+# Function<erl_eval.6.82930912>  
+# iex> mrs.("Smith")  
+# "Mrs Smith"  
+# iex> prefix.("Elixir").("Rocks")  
+# "Elixir Rocks"
+
+prefix = fn str1 ->
+  fn str2 -> "#{IO.puts(str1)} #{IO.puts(str2)}" end
+end
+
+mrs = prefix.("Mrs")
+mrs.("Smith")
+prefix.("Elixir").("Rocks")
